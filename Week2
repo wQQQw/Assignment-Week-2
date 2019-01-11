@@ -1,0 +1,30 @@
+<html>
+  <div id="message">
+  </div>
+  <input type="number" id="number">
+  </input>
+  <button id="guessButton">
+  GUESS
+  </button>
+</html>
+<script>
+  let button = document.getElementById('guessButton');
+  button.addEventListener('click', function() {
+    let userGuess = parseInt(document.getElementById('number').value);
+  
+
+      function randomNumber(minNumber,maxNumber){
+      return Math.floor(Math.random() * (maxNumber - minNumber +1) + minNumber);
+      } 
+
+      let random = randomNumber(0,1);
+
+
+  if (userGuess == random){
+  document.getElementById("message").innerHTML = 'Congratuation! You are so lucky ^^!';
+  }
+  else {
+  document.getElementById("message").innerHTML = 'You are not correct!';
+}
+} 
+</script>
